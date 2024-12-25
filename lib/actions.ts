@@ -35,7 +35,6 @@ export const signUpAction = async (signUpValues: SignUpValues) => {
       },
     });
   } catch (error) {
-    console.log("ERROR OCCURED SIGNUP ACTION", error.message);
     if (error instanceof PrismaClientKnownRequestError) {
       console.log(error.code);
       switch (error.code) {
